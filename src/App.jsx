@@ -15,6 +15,14 @@ import Mantor from "./page/Mantor";
 import Faq from "./page/Faq";
 import ScrollToTops from "./components/ScrollToTops";
 import AdmissionForm from "./page/AdmissionForm";
+import Index from "./views/index";
+
+//scss
+import "./assets/scss/hope-ui.scss";
+import "./assets/scss/custom.scss";
+import "./assets/scss/dark.scss";
+import "./assets/scss/rtl.scss";
+import "./assets/scss/customizer.scss";
 
 function App() {
   return (
@@ -34,6 +42,7 @@ function App() {
           <Route path="faq" element={<Faq />} />
           <Route path="admissionform" element={<AdmissionForm />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Index />} />
         </Routes>
         <ScrollToTops />
         <Footer />

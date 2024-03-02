@@ -32,6 +32,14 @@ const Hero = () => {
                 Parcourir les cours
               </Button>
               <Button
+                sx={{ marginRight: "12px" }}
+                ccomponent={NavLink}
+                to="/dashboard"
+                className={`${classes.button} ${classes.button_3}`}
+              >
+                DASHBORD
+              </Button>
+              <Button
                 ccomponent={NavLink}
                 to="/"
                 className={`${classes.button} ${classes.button_1}`}

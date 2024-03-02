@@ -19,8 +19,8 @@ import googleIcon from "../image/googleIcon.png";
 import SignUp from "./SignUp";
 
 export default function SignIn(props) {
-  const {openButtonClassname} = props;
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { openButtonClassname } = props;
+  let { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [openModal, setOpenModal] = useState(false);
 
   //EMAIL VALIDATION
@@ -44,18 +44,15 @@ export default function SignIn(props) {
   const ModalMangement = () => {
     onOpenChange(() => {
       isOpen = !isOpen;
-      setOpenModal(!isOpen); 
+      setOpenModal(!isOpen);
     });
   };
-{/*className="bg-[#754ffe] p-6 text-white text-sm font-bold "*/}
+  {
+    /*className="bg-[#754ffe] p-6 text-white text-sm font-bold "*/
+  }
   return (
     <div className="z-50">
-      <Button
-        radius="sm"
-        onPress={onOpen}
-        className={openButtonClassname}
-  
-      >
+      <Button radius="sm" onPress={onOpen} className={openButtonClassname}>
         Se connecter
       </Button>
       <Modal size="4xl" isOpen={isOpen} onOpenChange={onOpenChange}>
@@ -84,7 +81,12 @@ export default function SignIn(props) {
                           className="text-blue-500 font-bold "
                           onClick={ModalMangement}
                         >
-                          <SignUp openModal={openModal} openButtonClassname={'bg-white p-6 text-blue-500 text-sm font-bold'} />
+                          <SignUp
+                            openModal={openModal}
+                            openButtonClassname={
+                              "bg-white p-6 text-blue-500 text-sm font-bold"
+                            }
+                          />
                         </p>
                       </p>
                     </div>

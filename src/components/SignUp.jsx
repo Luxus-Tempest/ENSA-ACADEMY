@@ -25,7 +25,7 @@ import SignIn from "./SignIn";
 
 export default function SignUp(props) {
   const { openButtonClassname, openModal } = props;
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  let { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   //EMAIL VALIDATION
   const [value, setValue] = React.useState("");
